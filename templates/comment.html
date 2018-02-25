@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>网易评论</title>
+</head>
+<body>
+<div>
+
+    <dl>
+    {% for music, comment_list in query_list %}
+        <dt>歌名:{{ music.name }}   歌手:{{ music.artists_name }}   评论总量:{{ music.total }}</dt>
+
+        {% for comment in comment_list %}
+            <dd><p>{{ comment.comment }}</p>
+                <p>{{ comment.nickname }}&nbsp;&nbsp;{{ comment.time }}&nbsp;&nbsp;赞:{{ comment.likecount }}</p></dd>
+        {% endfor %}
+    {% endfor %}
+    </dl>
+
+</div>
+</body>
+</html>
