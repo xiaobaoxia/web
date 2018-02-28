@@ -9,8 +9,6 @@ django-haystack==2.6.0
 django-redis==4.8.0
 django-redis-sessions==0.6.1
 django-tinymce==2.6.0
-fdfs-client==4.0.7
-fdfs-client-py==1.2.6
 idna==2.6
 itsdangerous==0.24
 jieba==0.39
