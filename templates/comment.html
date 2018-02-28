@@ -1,23 +1,29 @@
 <!DOCTYPE html>
+{% load staticfiles %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>网易评论</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/music.css' %}">
+    <script type="text/javascript" src="{% static 'js/jquery-1.12.4.min.js' %}"></script>
+
 </head>
 <body>
 <div>
 
-    <dl>
+    <div class="top100">
     {% for music, comment_list in query_list %}
-        <dt>歌名:{{ music.name }}   歌手:{{ music.artists_name }}   评论总量:{{ music.total }}</dt>
+        <ul id="{{ forloop.counter }}"><div class="music_index"><text>{{ forloop.counter }}</text></div><p style="display: inline-block" class="music_title" >{{ music.name }}   歌手:{{ music.artists_name }}   评论总量:{{ music.total }}</p><div class="hidden"></div><div class="show" style="display: none"></div>
 
         {% for comment in comment_list %}
-            <dd><p>{{ comment.comment }}</p>
-                <p>{{ comment.nickname }}&nbsp;&nbsp;{{ comment.time }}&nbsp;&nbsp;赞:{{ comment.likecount }}</p></dd>
+            <li style="display: none"><p>{{ comment.comment }}</p>
+                <p>{{ comment.nickname }}&nbsp;&nbsp;{{ comment.time }}&nbsp;&nbsp;赞:{{ comment.likecount }}</p></li>
         {% endfor %}
+        </ul>
     {% endfor %}
-    </dl>
+    </div>
 
 </div>
+<script type="text/javascript" src="{% static 'js/music.js' %}"></script>
 </body>
 </html>
