@@ -1,0 +1,27 @@
+ul{
+    /*background-color: gray;*/
+    margin-top: 0;
+    margin-bottom: 0;
+    border-bottom: 1px solid lightgray;
+    /*height: 22px;*/
+}
+.music_title{
+    margin: 0 0 0 20px;
+    /*float: left;*/
+    text-align: right;
+    text-indent: 4em;
+}
+.music_index{
+    display: inline-block;
+    text-align: left;
+    width: 30px;
+}
+text{
+    text-align: right;
+}
+.hidden{
+    float: right;width:17px;height:23px;background:url(../images/icons.png) left -268px no-repeat;cursor:pointer;}
+
+
+.show{float: right;width:22px;height:23px;background:url(../images/down.png) left 5px no-repeat; cursor:pointer;
+}
